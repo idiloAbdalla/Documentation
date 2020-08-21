@@ -52,4 +52,5 @@ Particularly useful for photography,journalism, news blogs as they can personali
             elementToAppendTo: '#div2'
         })
 
-### Note: elementToAppendTo takes id's as argument 
+### Note: 
+- elementToAppendTo takes id's as argument 
