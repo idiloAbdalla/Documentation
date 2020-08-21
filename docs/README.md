@@ -48,5 +48,8 @@ Particularly useful for photography,journalism, news blogs as they can personali
        
         //Place content in a 
         myLibrary.contentBar({
-            id: ['#image2',#image3']
+            id: ['#image2',#image3'].
+            elementToAppendTo: '#div2'
         })
+
+### Note: elementToAppendTo takes id's as argument 
