@@ -50,7 +50,14 @@ Particularly useful for photography,journalism, news blogs as they can personali
         myLibrary.contentBar({
             id: ['#image2',#image3'].
             elementToAppendTo: '#div2'
+             minWidth: 200,
+             minHeight:200,
+             width: 200,
+             height: 300
         })
 
 ### Note: 
 - elementToAppendTo takes id's as argument 
+- minWidth & minHeight are the dimensions of the container for the content
+- width & height, are the dimensions of the content being placed into the container
+
