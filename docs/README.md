@@ -3,7 +3,9 @@
 *A library that allows developers to customize the layout of their page*
 ## Description
 Fit-To
-Particularly useful for photography,journalism, news blogs as they can personalize the layout of their content and see what potential layouts will look like. With the abilities, to drag to different parts of the page, resize content and temporarily hide sections. 
+Particularly useful for photography,journalism and news blogs as they can personalize the layout of their content and see what potential layouts will look like. With the abilities, to drag to different parts of the page, resize content and temporarily hide sections. Content such as images or tables, automatically resize to fit the containers they've been dropped in and developers can also use the content bar feature which stores all content in one area.
+
+This is simplified way to visualize what layout you can possibly choose.
 
 # Getting Started
 >Files to include 
@@ -16,11 +18,6 @@ Particularly useful for photography,journalism, news blogs as they can personali
 - Jquery
         <script src = "https://code.jquery.com/jquery-1.10.2.js"><script>
 
-
-## Example
-
-- Use code snippet, showing what it would look like 
-
 # API Calls 
 
 ## Creating Objects 
@@ -32,12 +29,17 @@ Particularly useful for photography,journalism, news blogs as they can personali
             //Must pass in id of element
             id: ['#image1,'#table2']
         })
+
+        //Can now access methods
+        newObject.resize()
+        newObject.hide() 
+
  ### Notes:  
  - The id field is for content such as images or tables that will be dropped into containers 
  - The selctor field is for elements that the user wants to resize, drag and accept droppables
 
 ## Methods and Arguments 
-        //Drag elements whose id's were
+        //Drag elements
         myLibrary.drag()
        
         //Resize elements
@@ -50,14 +52,15 @@ Particularly useful for photography,journalism, news blogs as they can personali
         myLibrary.contentBar({
             id: ['#image2',#image3'].
             elementToAppendTo: '#div2'
-             minWidth: 200,
+             minWidth: 200,  
              minHeight:200,
              width: 200,
              height: 300
         })
 
 ### Note: 
-- elementToAppendTo takes id's as argument 
-- minWidth & minHeight are the dimensions of the container for the content
+- Dimensions are in pixels 
+- elementToAppendTo takes an id as an argument 
+- minWidth and minHeight are the dimensions of the container for the content. The container however, increases to fit the size of its contents. 
 - width & height, are the dimensions of the content being placed into the container
 
