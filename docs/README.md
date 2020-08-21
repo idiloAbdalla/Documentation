@@ -18,8 +18,6 @@ This is simplified way to visualize what layout you can possibly choose.
 - Jquery
         <script src = "https://code.jquery.com/jquery-1.10.2.js"><script>
 
-# API Calls 
-
 ## Creating Objects 
         const newObject = new myLibrary({
             
@@ -32,13 +30,14 @@ This is simplified way to visualize what layout you can possibly choose.
 
         //Can now access methods
         newObject.resize()
-        newObject.hide() 
 
  ### Notes:  
  - The id field is for content such as images or tables that will be dropped into containers 
  - The selctor field is for elements that the user wants to resize, drag and accept droppables
 
 ## Methods and Arguments 
+A list of all methods and their arguments 
+
         //Drag elements
         myLibrary.drag()
        
@@ -46,21 +45,44 @@ This is simplified way to visualize what layout you can possibly choose.
         myLibrary.resize()
        
         //Hide an element temporarily 
-        myLibrary.hide()
+        myLibrary.hidden({selector: ['#box']})
        
         //Place content in a 
         myLibrary.contentBar({
             id: ['#image2',#image3'].
-            elementToAppendTo: '#div2'
+            elementToAppendTo: '#box'
              minWidth: 200,  
              minHeight:200,
              width: 200,
              height: 300
         })
+#### Drag 
+        //Drag elements
+        myLibrary.drag()
 
-### Note: 
-- Dimensions are in pixels 
-- elementToAppendTo takes an id as an argument 
+No paramaters are passed for this method. Drag an element from its center.
+
+#### Resize
+        //Resize elements
+        myLibrary.resize()
+
+Resizes elements in the South-East, South-West, North- West and North-East corners. Hovering over those areas, the cursor to resize will appear.
+#### Hidden
+        //Hide an element temporarily 
+        myLibrary.hidden({selector: ['#box']})
+This method take an array of id's as an argument 
+
+#### Content Bar
+         myLibrary.contentBar({
+            id: ['#image2',#image3'].
+            elementToAppendTo: '#box'
+             minWidth: 200,  
+             minHeight:200,
+             width: 200,
+             height: 300
+        })
+- This method takes an array of id's as an argument. The id's are for the content. 
+- elementToAppendTo: pass in the id of the element you want to append the content bar to
 - minWidth and minHeight are the dimensions of the container for the content. The container however, increases to fit the size of its contents. 
 - width & height, are the dimensions of the content being placed into the container
 
